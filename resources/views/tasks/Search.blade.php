@@ -1,7 +1,7 @@
 @foreach ($tasks as $Task)
     <tr>
         <td>{{ $Task->nom }}</td>
-        <td>{{ Str::limit($Task->description, 30) }} <a href="{{ route('tasks.show', $Task->id) }}">read more...</a></td>
+        <td>{{ $Task->description }}</td>
 
         <td class="d-flex">
             <a href="{{ route('tasks.edit', ['task' => $Task->id]) }}" class="btn btn-sm btn-default mx-2">
@@ -18,7 +18,6 @@
     </tr>
 @endforeach
 <tr>
-    <td></td>
     <td></td>
     <td></td>
     <td>

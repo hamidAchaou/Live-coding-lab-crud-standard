@@ -69,9 +69,12 @@ class TaskController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Task $task)
+    public function edit(string $id)
     {
-        //
+        $Projects = $this->projectsRepository->index(); 
+        $task = $this->projectsRepository->find($id);
+      return view('Tasks.edit',compact('task','Projects'));
+
     }
 
     /**

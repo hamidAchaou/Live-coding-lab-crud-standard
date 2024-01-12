@@ -3,9 +3,9 @@
 
 @section('content')
 
-<div class="wrapper">
+<div class="">
       
-        <div class="content-wrapper" style="min-height: 1302.4px;">
+        <div class="" style="min-height: 1302.4px;">
 
             <div class="content-header">
             </div>
@@ -19,7 +19,7 @@
                                 <div class="card-header">
                                     <h3 class="card-title"> <i class="nav-icon fas fa-table"></i> Ajouter un Projet</h3>
                                 </div>
-                               @include('Projects.form')
+                               @include('tasks.form')
                             </div>
                         </div>
                     </div>

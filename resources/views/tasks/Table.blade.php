@@ -3,7 +3,7 @@
         <tr>
             <th>Titre</th>
             <th>Description</th>
-            <th class="text-center">Actions</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
