@@ -1,4 +1,6 @@
 @extends('layouts.layout')
+@include('layouts.nav')
+
 @section('content')
 <div style="min-height: 1302.4px;">
     <div class="" style="min-height: 1302.4px;">
@@ -43,39 +45,13 @@
                                         <tr>
                                             <th>Titre</th>
                                             <th>Description</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($Projects as $Project)
-                                        <tr>
-                                            <td>{{ $Project->nom }}</td>
-                                            <td>{{ $Project->description }}</td>
-                                        </tr>                                            
-                                        @endforeach
-
-
+                                        @include('Projects.projectSearch')
                                     </tbody>
                                 </table>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center p-2">
-                                <div class="d-flex align-items-center mb-2">
-                                    <button type="button" class="btn  btn-default btn-sm">
-                                        <i class="fa-solid fa-file-arrow-down"></i>
-                                        IMPORTER</button>
-                                    <button type="button" class="btn  btn-default btn-sm mt-0 mx-2">
-                                        <i class="fa-solid fa-file-export"></i>
-                                        EXPORTER</button>
-                                </div>
-                                <div class="mr-5">
-                                    <ul class="pagination  m-0 float-right">
-                                        <li class="page-item"><a class="page-link text-secondary" href="#">«</a></li>
-                                        <li class="page-item"><a class="page-link text-secondary active" href="#">1</a></li>
-                                        <li class="page-item"><a class="page-link text-secondary" href="#">2</a></li>
-                                        <li class="page-item"><a class="page-link text-secondary" href="#">3</a></li>
-                                        <li class="page-item"><a class="page-link text-secondary" href="#">»</a></li>
-                                    </ul>
-                                </div>
                             </div>
                         </div>
                     </div>

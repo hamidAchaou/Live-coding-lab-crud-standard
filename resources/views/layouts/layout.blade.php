@@ -12,7 +12,6 @@
 
 <body class="sidebar-mini" style='height:auto'>
     <div class='wrapper'>
-         @extends('layouts.nav')
          @extends('layouts.sideBar')
     
         <div class='content-wrapper' style='min-hieght:1302.4px'>@yield('content')</div>
