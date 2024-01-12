@@ -1,4 +1,6 @@
 @extends('layouts.layout')
+@include('layouts.nav')
+
 @section('content')
 <div style="min-height: 1302.4px;">
             <div class="content-header">
@@ -9,13 +11,18 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="float-sm-right">
-                                <a href="./ajouter.php" class="btn btn-info">
-                                    <i class="fas fa-plus"></i> Neveau projet
+                                <a href="{{ route('tasks.create')}}" class="btn btn-info">
+                                    <i class="fas fa-plus"></i> Ajouter une Tache
                                 </a>
                             </div>
-
                         </div>
                     </div>
+                    @if (session('success'))
+                    <div class="alert alert-success alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        {{ session('success') }}.
+                    </div>
+                @endif
                 </div>
             </div>
             <section class="content">

@@ -43,7 +43,8 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        $Projects = $this->projectsRepository->index();
+        return view("tasks.create", compact("Projects"));
     }
 
     /**
@@ -51,7 +52,10 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request)
     {
-        //
+        $validatedData = $request->validated();
+        $this->tasksRepository->create($validatedData);
+    
+        return redirect()->route('projects.tasks', ['projectId' => $request->projetId])->with('success', "Task successfully created");
     }
 
     /**

@@ -20,5 +20,9 @@ abstract class BaseRepository {
     public function find($projectId) {
         return $this->model->findOrFail($projectId);
     }
-
+    // Create 
+    public function create($validatedata){
+        return  $this->model->create($validatedata);
+    
+    }
 }
