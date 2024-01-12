@@ -7,14 +7,14 @@
     <div class="card-body">
         <div class="form-group">
             <label for="nom" class="form-label">Projet</label>
-            <select name="project_id" id="project_id" class="form-control">
+            <select name="projetId" id="projetId" class="form-control">
                 @foreach ($Projects as $project)
                     <option value="{{ $project->id }}" {{ request()->route('id')  ? 'selected' : '' }}>
                         {{ $project->nom }}
                     </option>
                 @endforeach
             </select>
-            @error('project_id')
+            @error('projetId')
                 <div class="invalid-feedback text-danger">{{ $message }}</div>
             @enderror
         </div>
@@ -37,10 +37,9 @@
             @enderror
         </div>
 
-        {{-- <input name="project_id" type="hidden" class="form-control" value="{{ $project->id }}"> --}}
     </div>
     <div class="card-footer">
         <a href="{{ route('tasks.index', $project->id) }}" class="btn btn-default">Cancel</a>
-        <button type="submit" class="btn btn-primary mx-2">{{ isset($task) ? 'Update' : 'Add' }}</button>
+        <button type="submit" class="btn btn-primary mx-2">{{ isset($task) ? 'modifier' : 'Ajouter' }}</button>
     </div>
 </form>

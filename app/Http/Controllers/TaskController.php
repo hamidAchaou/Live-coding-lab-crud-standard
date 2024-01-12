@@ -80,11 +80,15 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTaskRequest $request, Task $task)
-    {
-        //
-    }
 
+    public function update(UpdateTaskRequest $request, string $id)
+    {
+        $validatedData = $request->validated();
+
+        $this->tasksRepository->update($validatedData,$id);
+        return redirect()->route('projects.tasks',['projectId'=> $request->projetId])->with('success',"tasks update succefuly");
+
+    }
     /**
      * Remove the specified resource from storage.
      */

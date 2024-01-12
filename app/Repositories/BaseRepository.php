@@ -25,4 +25,16 @@ abstract class BaseRepository {
         return  $this->model->create($validatedata);
     
     }
+
+    // update
+    public function update(array $validatedData, $id) {
+    
+        $data = $this->model->find($id);
+        if(!$data) {
+          return abort(404,"tasks not found");
+        }
+        
+        return $data->update($validatedData);
+    
+      }
 }
