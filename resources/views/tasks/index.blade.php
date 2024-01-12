@@ -37,88 +37,9 @@
                                 </div>
 
                                 <div class="card-body table-responsive p-0">
-                                    <table class="table table-striped text-nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th>Titre</th>
-                                                <th>Description</th>
-                                                <th>Date de Début</th>
-                                                <th>Date de Fin</th>
-                                                <th class="text-center">Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Projet 1</td>
-                                                <td>
-                                                    Description du projet 1.
-                                                </td>
-                                                <td>11-7-2014</td>
-                                                <td>11-7-2014</td>
-                                                <td class="text-center">
-                                                    <a href="././tache/index.html" class="btn btn-sm btn-default mx-2">les Tâches</a>
-                                                    <a href="./show.php" class='btn btn-default btn-sm'>
-                                                        <i class="far fa-eye"></i>
-                                                    </a>
-                                                    <a href="./edit.php" class="btn btn-sm btn-default"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                    <button type="button" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Projet 2</td>
-                                                <td>
-                                                    Description du projet 2.
-                                                </td>
-                                                <td>11-7-2014</td>
-                                                <td>11-7-2014</td>
-                                                <td class="text-center">
-                                                    <a href="././tache/index.html" class="btn btn-sm btn-default mx-2">les Tâches</a>
-                                                    <a href="./show.php" class='btn btn-default btn-sm'>
-                                                        <i class="far fa-eye"></i>
-                                                    </a>
-                                                    <a href="./edit.php" class="btn btn-sm btn-default"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                    <button type="button" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Projet 3</td>
-                                                <td>
-                                                    Description du projet 3.
-                                                </td>
-                                                <td>11-7-2014</td>
-                                                <td>11-7-2014</td>
-                                                <td class="text-center">
-                                                    <a href="../tache/index.php" class="btn btn-sm btn-default mx-2">les Tâches</a>
-                                                    <a href="./show.php" class='btn btn-default btn-sm'>
-                                                        <i class="far fa-eye"></i>
-                                                    </a>
-                                                    <a href="./edit.php" class="btn btn-sm btn-default"><i class="fa-solid fa-pen-to-square"></i></a>
-                                                    <button type="button" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                    @include('tasks.Table')
                                 </div>
 
-                                <div class="d-flex justify-content-between align-items-center p-2">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <button type="button" class="btn  btn-default btn-sm">
-                                            <i class="fa-solid fa-file-arrow-down"></i>
-                                            IMPORTER</button>
-                                        <button type="button" class="btn  btn-default btn-sm mt-0 mx-2">
-                                            <i class="fa-solid fa-file-export"></i>
-                                            EXPORTER</button>
-                                    </div>
-                                    <div class="mr-5">
-                                        <ul class="pagination  m-0 float-right">
-                                            <li class="page-item"><a class="page-link" href="#">«</a></li>
-                                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">»</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

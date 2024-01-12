@@ -25,7 +25,8 @@ class TaskController extends Controller
         $projectId = $request->projectId;
         
         if($projectId) {
-            $tasks = $this->tasksRepository->find($projectId);
+            $tasks = $this->tasksRepository->getTaskbyprojetId($projectId);
+            return view("tasks.index", compact("tasks"));
         } else {
             $tasks = $this->tasksRepository->index();        
         }

@@ -20,4 +20,10 @@ use App\Repositories\BaseRepository;
     public function model():string{
         return Task::class;
     }
+
+    // get Tasks By Projects Id
+    public function  getTaskbyprojetId($projetId){
+        return $this->model->where('projetId', $projetId)->paginate(4);
+         
+       }
  }
