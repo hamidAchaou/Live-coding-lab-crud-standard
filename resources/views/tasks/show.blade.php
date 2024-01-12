@@ -7,7 +7,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Détails du projet</h1>
+                            <h1>{{ $project->nom}}</h1>
                         </div>
                         <div class="col-sm-6">
                             <a href="./edit.php" class="btn btn-default float-right"><i class="far fa-edit"></i> Modifier</a>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
+use App\Repositories\ProjectsRepository;
 use App\Repositories\TasksRepository;
 use Illuminate\Http\Request;
 
@@ -12,8 +13,10 @@ class TaskController extends Controller
 {
 
     protected $tasksRepository;
-    public function __construct(TasksRepository $TasksRepository){
+    protected $projectsRepository;
+    public function __construct(TasksRepository $TasksRepository, ProjectsRepository $projectsRepository){
         $this->tasksRepository = $TasksRepository;
+        $this->projectsRepository = $projectsRepository;
     }
 
     /**
@@ -26,7 +29,8 @@ class TaskController extends Controller
         
         if($projectId) {
             $tasks = $this->tasksRepository->getTaskbyprojetId($projectId);
-            return view("tasks.index", compact("tasks"));
+            $project = $this->projectsRepository->find($projectId);
+            return view("tasks.index", compact("tasks", "project"));
         } else {
             $tasks = $this->tasksRepository->index();        
         }
