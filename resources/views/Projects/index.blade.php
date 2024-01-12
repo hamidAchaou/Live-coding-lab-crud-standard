@@ -11,11 +11,6 @@
                         <h1>Liste des projets</h1>
                     </div>
                     <div class="col-sm-6">
-                        <div class="float-sm-right">
-                            <a href="./create.php" class="btn btn-info">
-                                <i class="fas fa-plus"></i> Nouveau projet
-                            </a>
-                        </div>
 
                     </div>
                 </div>

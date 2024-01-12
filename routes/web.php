@@ -21,4 +21,5 @@ Route::get('/' ,[ProjectsController::class, 'index'])->name('projects.index');
 
 
 Route::resource('tasks', TaskController::class);
-// Route::get(TaskController::class,'index')->name('tasks.index');
+
+Route::get('projects/tasks/{projectId}', [TaskController::class,'index'])->name('projects.tasks');

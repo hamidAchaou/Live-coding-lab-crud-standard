@@ -3,7 +3,7 @@
         <td>{{ $Project->nom }}</td>
         <td>{{ $Project->description }}</td>
         <td>
-            <a href="{{ route('tasks.index',['projetId'=> $Project->id] )}}" class="btn btn-sm btn-default mx-2">
+            <a href="{{ route('projects.tasks',['projectId'=> $Project->id] )}}" class="btn btn-sm btn-default mx-2">
                 <i class="fa-regular fa-eye"></i>
             </a>
 

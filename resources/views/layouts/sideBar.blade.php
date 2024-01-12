@@ -28,16 +28,6 @@
                         </p>
                     </a>
                 </li>
-                <!-- MEMBRE -->
-
-                <li class="nav-item">
-                    <a href="../../gestion_des_projet/membre/index.php" class="nav-link ">
-                        <i class="fa-solid fa-users pl-1 pr-1"></i>
-                        <p>
-                            Membre
-                        </p>
-                    </a>
-                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

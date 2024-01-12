@@ -6,6 +6,7 @@ use App\Models\Task;
 use App\Http\Requests\StoreTaskRequest;
 use App\Http\Requests\UpdateTaskRequest;
 use App\Repositories\TasksRepository;
+use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
@@ -18,10 +19,18 @@ class TaskController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $tasks = $this->tasksRepository->index();        
-        return view("tasks.index");
+
+        $projectId = $request->projectId;
+        
+        if($projectId) {
+            $tasks = $this->tasksRepository->find($projectId);
+        } else {
+            $tasks = $this->tasksRepository->index();        
+        }
+        
+        return view("tasks.index", compact("tasks"));
     }
 
     /**

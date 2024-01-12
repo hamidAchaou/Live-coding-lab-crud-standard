@@ -16,4 +16,9 @@ abstract class BaseRepository {
        return $this->model->paginate(4);
     }
 
+    // find
+    public function find($projectId) {
+        return $this->model->findOrFail($projectId);
+    }
+
 }
