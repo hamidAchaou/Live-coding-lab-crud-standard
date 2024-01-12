@@ -37,4 +37,12 @@ abstract class BaseRepository {
         return $data->update($validatedData);
     
       }
+
+    //   delete
+    public function delete($id) {
+        $data = $this->model->find($id);
+        if(!$data) {
+          return abort(404);
+        }
+    }
 }

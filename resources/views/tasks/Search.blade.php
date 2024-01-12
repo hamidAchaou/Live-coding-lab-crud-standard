@@ -10,8 +10,8 @@
             <form action="{{ route('tasks.destroy', ['task' => $Task->id]) }}" method="post">
                 @csrf
                 @method('delete')
-                <button type="submit" class="btn btn-sm btn-danger">
-                    <i class="fa-solid fa-trash"></i>
+                <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')"><i
+                            class="fas fa-trash"></i>
                 </button>
             </form>
         </td>
